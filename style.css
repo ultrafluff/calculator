@@ -1,5 +1,19 @@
+
 .background {
     height: 700px;
     width: 600px;
     background-color: hwb(0 72% 28%);
+}
+
+.layout {
+    display: flex;
+    flex-direction: column;
+}
+
+.textbox {
+    
+}
+
+.buttons {
+
 }
