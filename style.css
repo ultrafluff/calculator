@@ -1,6 +1,6 @@
 
 .background {
-    height: 600px;
+    height: 700px;
     width: 550px;
     background-color: hwb(0 72% 28%);
 }
@@ -38,4 +38,9 @@
 
 .operator {
     background-color: rgb(255, 0, 0);
+}
+.equals {
+    width: 475px;
+    height: 75px;
+    font-size: 30px;
 }
