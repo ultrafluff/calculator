@@ -33,5 +33,9 @@
 .btn {
     height: 100px;
     width: 100px;
+    font-size: 30px;
+}
 
+.operator {
+    background-color: rgb(255, 0, 0);
 }
