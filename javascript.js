@@ -35,7 +35,8 @@ const button9 = document.querySelector(".button9")
 function buttonclick(num) {
     textbox.textContent = numholder + num
     numholder = numholder + num
-} 
+}
+
 button1.addEventListener("click", () => buttonclick("1"))
 button2.addEventListener("click", () => buttonclick("2"))
 button3.addEventListener("click", () => buttonclick("3"))
@@ -45,6 +46,20 @@ button6.addEventListener("click", () => buttonclick("6"))
 button7.addEventListener("click", () => buttonclick("7"))
 button8.addEventListener("click", () => buttonclick("8"))
 button9.addEventListener("click", () => buttonclick("9"))
+
+const operationM = document.querySelector(".operatorX")
+const operationD = document.querySelector(".operatorD")
+const operationA = document.querySelector(".operatorA")
+const operationS = document.querySelector(".operatorS")
+
+function operatorclick(operation) {
+    textbox.textContent = 0
+    textbox.textContent = operation
+}
+operationA.addEventListener("click", () => operatorclick("+") )
+operationS.addEventListener("click", () => operatorclick("-") )
+operationM.addEventListener("click", () => operatorclick("x") )
+operationD.addEventListener("click", () => operatorclick("÷") )
 
 
 
