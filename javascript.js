@@ -3,20 +3,20 @@ let num2;
 let operator;
 
 
-function add(num1, num2) {
-    num1 + num2
+function add(number1, number2) {
+    return number1 + number2
 }
 
-function subtract(num1, num2) {
-    num1 - num2
+function subtract(number1, number2) {
+    return number1 - number2
 }
 
-function muptipy(num1, num2) {
-    num1 * num2
+function muptipy(number1, number2) {
+    return number1 * number2
 }
 
-function divide(num1, num2) {
-    num1 / num2 
+function divide(number1, number2) {
+    return number1 / number2
 }
 
 
@@ -57,8 +57,9 @@ function operatorclick(operation) {
     textbox.textContent = 0
     textbox.textContent = operation
     numholder = ""
+    operator = operation
 }
-
+    
 operationA.addEventListener("click", () => operatorclick("+") )
 operationS.addEventListener("click", () => operatorclick("-") )
 operationM.addEventListener("click", () => operatorclick("x") )
@@ -71,6 +72,24 @@ const equals = document.querySelector(".equals")
 function equal() {
     num2 = numholder
     numholder = ''
+    textbox.textContent = ''
+    if (operator == "+") {
+        num1 = Number(num1)
+        num2 = Number(num2)
+        console.log(add(num1, num2))
+    } else if (operator == "-") {
+        num1 = Number(num1)
+        num2 = Number(num2)
+        console.log(subtract(num1, num2))
+    } else if (operator == "x") {
+        num1 = Number(num1)
+        num2 = Number(num2)
+        console.log(muptipy(num1, num2))
+    } else if (operator == "/") {
+        num1 = Number(num1)
+        num2 = Number(num2)
+        console.log(divide(num1, num2))
+    }
 }
 
 equals.addEventListener("click", () => equal())
