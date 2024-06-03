@@ -53,13 +53,27 @@ const operationA = document.querySelector(".operatorA")
 const operationS = document.querySelector(".operatorS")
 
 function operatorclick(operation) {
+    num1 = numholder
     textbox.textContent = 0
     textbox.textContent = operation
+    numholder = ""
 }
+
 operationA.addEventListener("click", () => operatorclick("+") )
 operationS.addEventListener("click", () => operatorclick("-") )
 operationM.addEventListener("click", () => operatorclick("x") )
 operationD.addEventListener("click", () => operatorclick("÷") )
+
+
+
+const equals = document.querySelector(".equals")
+
+function equal() {
+    num2 = numholder
+    numholder = ''
+}
+
+equals.addEventListener("click", () => equal())
 
 
 
