@@ -18,9 +18,10 @@ function muptipy(number1, number2) {
 function divide(number1, number2) {
     return number1 / number2
 }
-
+    
 
 const textbox = document.querySelector(".textbox")
+const button0 = document.querySelector(".button0")
 const button1 = document.querySelector(".button1")
 const button2 = document.querySelector(".button2")
 const button3 = document.querySelector(".button3")
@@ -32,11 +33,35 @@ const button8 = document.querySelector(".button8")
 const button9 = document.querySelector(".button9")
     let numholder = ""
     let num = ""
+
+    function buttondisplayed(boolean) {
+            button0.disabled = boolean
+            button1.disabled = boolean
+            button2.disabled = boolean
+            button3.disabled = boolean
+            button4.disabled = boolean
+            button5.disabled = boolean
+            button6.disabled = boolean
+            button7.disabled = boolean
+            button8.disabled = boolean
+            button9.disabled = boolean
+    }
+
+
+    function charlimit() {
+        if (numholder.length > 9) {
+            buttondisplayed(true)
+       
+    }
+}
+
+
 function buttonclick(num) {
     textbox.textContent = numholder + num
     numholder = numholder + num
+    charlimit()
 }
-
+button0.addEventListener("click", () => buttonclick("0"))
 button1.addEventListener("click", () => buttonclick("1"))
 button2.addEventListener("click", () => buttonclick("2"))
 button3.addEventListener("click", () => buttonclick("3"))
@@ -58,6 +83,7 @@ function operatorclick(operation) {
     textbox.textContent = operation
     numholder = ""
     operator = operation
+    buttondisplayed(false)
 }
     
 operationA.addEventListener("click", () => operatorclick("+") )
@@ -90,6 +116,7 @@ function equal() {
         num2 = Number(num2)
         console.log(divide(num1, num2))
     }
+    buttondisplayed(false)
 }
 
 equals.addEventListener("click", () => equal())
